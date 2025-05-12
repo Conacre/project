@@ -1,0 +1,27 @@
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  margin-left: 250px;
+  height: 80px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav a.active {
+  color: #007bff;
+  font-weight: bold;
+}
