@@ -1,121 +1,135 @@
 .sidebar {
-  grid-area: sidebar;
+  height: 100vh;
+  width: 250px;
   background-color: #fff;
   border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
   padding-top: 10px;
-  margin-top: -80px;
-  text-align: center; /* Центрирование содержимого */
+  text-align: center;
   position: relative;
 }
 
 .logo-container {
-  margin-bottom: 20px; /* Отступ снизу для логотипа */
+  margin-bottom: 20px;
 }
 
 .logo {
-  width: 100px; /* Размер логотипа */
+  width: 100px;
   height: auto;
-  image-rendering: -webkit-optimize-contrast; /* Оптимизация для четкости */
-  image-rendering: crisp-edges; /* Предотвращение размытия */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .logo-text {
-  margin-top: 30px; /* Отступ сверху для текста */
+  margin-top: 30px;
   font-size: 14px;
-  color: #888; /* Серый цвет текста */
+  color: #888;
 }
 
 .divider {
-  margin-top: 30px; /* Расстояние от текста */
-  border-top: 1px solid #ddd; /* Полоса */
-  width: 100%; /* Полоса занимает всю ширину Sidebar */
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  width: 100%;
 }
 
-.user-info img {
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.divider.full-width {
+  width: 100%;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-.user-info p {
-  margin: 5px 0;
-}
-
-.buttons-container {
-  margin-top: 20px; /* Отступ сверху для кнопок */
+.main-buttons,
+.additional-buttons {
+  width: 100%;
   display: flex;
-  flex-direction: column; /* Расположение кнопок одна под другой */
+  flex-direction: column;
   align-items: center;
+  gap: 10px;
 }
 
-.button {
+.sidebar-button {
+  width: 90%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  width: 80%; /* Ширина кнопки */
-  padding: 10px 15px;
-  margin-bottom: 10px; /* Отступ между кнопками */
-  border: 1px solid #ffffff;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 5px;
-  background-color: #ffffff;
-  color: #333;
-  font-size: 14px;
   cursor: pointer;
   text-align: left;
-  transition: background-color 0.3s ease; /* Плавный переход цвета */
 }
 
-.button:hover {
-  background-color: #e9e9e9; /* Серый цвет при наведении */
+.sidebar-button:hover {
+  background-color: #e9e9e9;
 }
 
 .button-icon {
-  width: 20px; /* Размер иконки */
+  width: 20px;
   height: 20px;
-  margin-right: 10px; /* Отступ между иконкой и текстом */
-}
-
-.account-container {
-  position: absolute;
-  bottom: 250px; /* Расположить ниже середины */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%; /* Ширина блока */
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 5px; /* Закругленные углы */
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Расстояние между аватаркой и текстом */
-}
-
-.account-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%; /* Круглая аватарка */
+  margin-right: 10px;
 }
 
 .account-info {
-  text-align: left;
-  flex: 1;
+  width: 90%;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: auto;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
-.account-name {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 5px;
+.account-info hr.divider {
+  border: none; 
+  border-top: 1px solid #ddd; 
+  width: calc(100% + 32px); 
+  margin-left: -16px; 
+  margin-right: -16px; 
+}
+
+.account-top {
   display: flex;
-  flex-direction: column; /* Имя и фамилия одна под другой */
+  align-items: center;
+  gap: 10px;
+}
+
+.account-bottom {
+  margin-top: 10px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .account-details {
-  margin-top: 10px; /* Отступ сверху для деталей */
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Убедиться, что весь контейнер выровнен по левому краю */
 }
 
-.account-phone,
-.account-email {
+.account-name {
+  font-weight: bold;
+  text-align: left; /* Выровнять текст по левому краю */
+}
+
+.account-contact {
+  color: #888;
   font-size: 14px;
-  color: #666;
-  margin: 2px 0;
+  text-align: left; /* Выровнять текст по левому краю */
+  margin-bottom: 10px; /* Увеличить расстояние между номером и почтой */
+}
+
+.account-contact span {
+  display: block; /* Каждый элемент на новой строке */
+  margin-bottom: 10px; /* Отступ между строками */
+}
+
+.additional-buttons {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }

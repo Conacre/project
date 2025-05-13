@@ -7,11 +7,20 @@ body {
 .app {
   display: grid;
   grid-template-areas:
-    "header header"
+    "sidebar header"
     "sidebar main";
   grid-template-columns: 250px 1fr;
   grid-template-rows: auto 1fr;
   height: 100vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+  margin-left: 0; /* Исправлено: убран отступ */
 }
 
 .main {
